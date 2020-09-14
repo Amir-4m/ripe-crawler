@@ -1,0 +1,12 @@
+sqlparse==0.2.4
+requests==2.21.0
+
+Django>=2.2, <2.3
+celery>=4.4, <4.5
+django-celery-beat
+
+python-decouple
+psycopg2-binary
+python-memcached
+django-netfields
+beautifulsoup4
