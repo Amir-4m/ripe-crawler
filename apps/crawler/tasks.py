@@ -4,7 +4,7 @@ from .crawler import RipeCrawler
 from .models import RangeIP
 
 
-@periodic_task(run_every=(crontab(hour='0', minute='0', second='0')), name="check_ip_ranges", ignore_result=True)
+@periodic_task(run_every=(crontab(hour='0', minute='0')), name="check_ip_ranges", ignore_result=True)
 def check_ip_ranges():
     qs = RangeIP.objects.all()
     crawled_ips = RipeCrawler().get_organization_ip_range()

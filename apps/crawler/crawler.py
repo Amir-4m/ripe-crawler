@@ -71,7 +71,7 @@ class RipeCrawler(object):
             for inet in inets:
                 try:
                     ip_range = inet['primary-key']['attribute'][0]['value'].split(' - ')
-                    ip1 = ipaddress.ip_network(ip_range[0])
+                    ip1 = ipaddress.ip_address(ip_range[0])
                     ip2 = ipaddress.ip_address(ip_range[1])
                     ranges.add(list(ipaddress.summarize_address_range(ip1, ip2))[0])
                 except Exception as e:
