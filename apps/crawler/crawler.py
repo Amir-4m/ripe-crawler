@@ -65,7 +65,7 @@ class RipeCrawler(object):
                 response = requests.get(self.organization_inet_url % org_id)
                 inets = json.loads(force_text(response.content))['objects']['object']
             except Exception as e:
-                logger.error(f"could not fetch org_id {org_id} : {e}")
+                logger.error(f"could not fetch inets for org_id {org_id} : {e}")
                 continue
 
             for inet in inets:
