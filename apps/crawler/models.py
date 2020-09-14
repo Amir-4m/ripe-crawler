@@ -13,4 +13,4 @@ class RangeIP(models.Model):
 
     @property
     def network(self):
-        return self.inet.netwok
+        return self.inet.network
